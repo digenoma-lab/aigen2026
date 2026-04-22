@@ -1,0 +1,14 @@
+<div class="section-heading">
+  <p class="eyebrow">Instituciones</p>
+  <h2>Organizan y articulan este encuentro</h2>
+</div>
+<div class="logo-strip" role="list" aria-label="Instituciones participantes">
+  {{ range site.Params.institutions }}
+    <article class="logo-strip__item" role="listitem">
+      <a class="logo-strip__link" href="{{ .url }}" target="_blank" rel="noreferrer" aria-label="{{ .name }}">
+        <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy">
+        <p>{{ .name }}</p>
+      </a>
+    </article>
+  {{ end }}
+</div>

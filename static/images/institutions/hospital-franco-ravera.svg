@@ -1,0 +1,11 @@
+<svg width="360" height="144" viewBox="0 0 360 144" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hospitalTitle">
+  <title id="hospitalTitle">Hospital Dr. Franco Ravera Zunino</title>
+  <rect width="360" height="144" rx="24" fill="white"/>
+  <rect x="12" y="12" width="336" height="120" rx="18" fill="#F7FAFE" stroke="#D8E4F4"/>
+  <circle cx="84" cy="72" r="32" fill="#6D4DF2"/>
+  <path d="M84 55V89" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <path d="M67 72H101" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <text x="132" y="56" fill="#0B1A3A" font-family="Manrope, Segoe UI, sans-serif" font-size="19" font-weight="800">Hospital Dr. Franco</text>
+  <text x="132" y="84" fill="#0B1A3A" font-family="Manrope, Segoe UI, sans-serif" font-size="19" font-weight="800">Ravera Zunino</text>
+  <text x="132" y="108" fill="#17B6B4" font-family="Manrope, Segoe UI, sans-serif" font-size="14" font-weight="800">Salud pública regional</text>
+</svg>

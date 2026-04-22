@@ -1,0 +1,31 @@
+---
+title: "Speakers"
+summary: "Espacio para presentar keynote speakers, panelistas e invitados de AIGEN 2026."
+speakers:
+  - name: "Keynote speaker por confirmar"
+    role: "Keynote"
+    affiliation: "Invitado internacional"
+    bio: "Perfil reservado para una ponencia magistral sobre IA aplicada a sistemas de salud, gobernanza de datos e innovación pública."
+  - name: "Speaker en genómica por confirmar"
+    role: "Keynote internacional"
+    affiliation: "Centro de investigación o institución pública"
+    bio: "Espacio destinado a una presentación sobre implementación de genómica en contextos clínicos, epidemiológicos y de salud pública."
+  - name: "Panel de innovación en salud"
+    role: "Conversatorio"
+    affiliation: "Academia, hospitales y sector público"
+    bio: "Bloque para representantes con experiencia en transferencia tecnológica, implementación y toma de decisiones."
+  - name: "Flash talks seleccionadas"
+    role: "Flash talks"
+    affiliation: "Investigadores y equipos emergentes"
+    bio: "Serie de presentaciones breves para compartir pilotos, resultados preliminares y proyectos colaborativos."
+  - name: "Sesión de pósteres"
+    role: "Poster session"
+    affiliation: "Estudiantes, investigadores y profesionales"
+    bio: "Instancia dedicada a investigación aplicada, casos regionales y nuevas líneas de trabajo en IA y genómica."
+  - name: "Moderación científica"
+    role: "Moderación"
+    affiliation: "Comité organizador"
+    bio: "Equipo responsable de conducir discusiones, articular preguntas y facilitar el diálogo entre disciplinas."
+---
+
+La nómina de speakers se actualizará progresivamente a medida que se cierren confirmaciones. Esta página ya está estructurada para mostrar perfiles, afiliaciones y roles sin necesidad de tocar las plantillas.

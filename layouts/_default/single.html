@@ -1,0 +1,208 @@
+{{ define "main" }}
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__copy">
+        <p class="eyebrow">AIGEN 2026</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.summary }}
+          <p class="page-hero__summary">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container page-grid">
+      <article class="prose-card">
+        {{ .Content }}
+      </article>
+
+      {{ if eq .File.BaseFileName "program" }}
+        <aside class="stack-card">
+          <h2>Resumen rápido</h2>
+          <p>Dos jornadas que conectan investigación, implementación y colaboración regional.</p>
+          <ul class="check-list">
+            <li>Keynotes y keynote internacional</li>
+            <li>Conversatorios con foco público-sanitario</li>
+            <li>Flash talks y posters</li>
+            <li>Networking, becas y premiación</li>
+          </ul>
+        </aside>
+      {{ else if eq .File.BaseFileName "registration" }}
+        <aside class="stack-card">
+          <h2>Fechas clave</h2>
+          <ul class="info-list">
+            <li><strong>Apertura:</strong> marzo 2026</li>
+            <li><strong>Cierre temprano:</strong> junio 2026</li>
+            <li><strong>Confirmaciones:</strong> julio 2026</li>
+          </ul>
+        </aside>
+      {{ else if eq .File.BaseFileName "venue" }}
+        <aside class="stack-card">
+          <h2>Ubicación</h2>
+          <ul class="info-list">
+            <li><strong>Ciudad:</strong> {{ .Params.city }}</li>
+            <li><strong>Espacio:</strong> {{ .Params.place }}</li>
+            <li><strong>Formato:</strong> presencial</li>
+          </ul>
+        </aside>
+      {{ else if eq .File.BaseFileName "contact" }}
+        <aside class="stack-card">
+          <h2>Canales</h2>
+          <ul class="info-list">
+            <li><strong>Email:</strong> <a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
+            <li><strong>Teléfono:</strong> {{ site.Params.contact.phone }}</li>
+            <li><strong>Ciudad:</strong> {{ site.Params.contact.city }}</li>
+          </ul>
+        </aside>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ if eq .File.BaseFileName "program" }}
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Programa completo</p>
+          <h2>Agenda por jornada</h2>
+        </div>
+        <div class="program-grid">
+          {{ range site.Data.program.days }}
+            <article class="program-card">
+              <div class="program-card__top">
+                <p class="program-card__date">{{ .full_date }}</p>
+                <h3>{{ .theme }}</h3>
+                <p>{{ .description }}</p>
+              </div>
+              <ol class="timeline">
+                {{ range .sessions }}
+                  <li class="timeline__item">
+                    <div class="timeline__time">{{ .time }}</div>
+                    <div class="timeline__content">
+                      <strong>{{ .title }}</strong>
+                      {{ with .description }}<p>{{ . }}</p>{{ end }}
+                    </div>
+                  </li>
+                {{ end }}
+              </ol>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .File.BaseFileName "speakers" }}
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Invitados</p>
+          <h2>Speakers y perfiles</h2>
+        </div>
+        <div class="card-grid card-grid--three">
+          {{ range .Params.speakers }}
+            <article class="feature-card speaker-card">
+              <span class="pill">{{ .role }}</span>
+              <h3>{{ .name }}</h3>
+              <p class="speaker-card__affiliation">{{ .affiliation }}</p>
+              <p>{{ .bio }}</p>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .File.BaseFileName "venue" }}
+    <section class="section section--soft">
+      <div class="container card-grid">
+        {{ range .Params.details }}
+          <article class="feature-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container venue-map">
+        <div class="section-heading">
+          <p class="eyebrow">Mapa</p>
+          <h2>Cómo llegar a la Universidad de O'Higgins</h2>
+          <p>{{ .Params.address }}</p>
+        </div>
+        <div class="venue-map__card">
+          <iframe
+            class="venue-map__frame"
+            title="Mapa de la Universidad de O'Higgins"
+            src="{{ .Params.map_embed_url }}"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="venue-map__actions">
+          <a class="button button--primary" href="{{ .Params.map_directions_url }}" target="_blank" rel="noreferrer">Abrir en Google Maps</a>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .File.BaseFileName "registration" }}
+    <section class="section section--soft">
+      <div class="container card-grid">
+        {{ range .Params.registration_cards }}
+          <article class="feature-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .File.BaseFileName "organizers-sponsors" }}
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Equipo e instituciones</p>
+          <h2>Organización y patrocinio</h2>
+        </div>
+        <div class="card-grid card-grid--three">
+          {{ range .Params.organizers }}
+            <article class="feature-card">
+              <h3>{{ .name }}</h3>
+              <p class="speaker-card__affiliation">{{ .role }}</p>
+              <p>{{ .text }}</p>
+            </article>
+          {{ end }}
+        </div>
+        <div class="sponsor-block">
+          <h3>Sponsors y aliados</h3>
+          <div class="tag-row">
+            {{ range .Params.sponsors }}
+              <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if eq .File.BaseFileName "contact" }}
+    <section class="section section--soft">
+      <div class="container card-grid">
+        {{ range .Params.channels }}
+          <article class="feature-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+            {{ with .link }}
+              <a class="text-link" href="{{ .url }}">{{ .label }}</a>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $pageTitle := printf "%s | %s" .Title site.Title }}
+{{ if .IsHome }}{{ $pageTitle = printf "%s | %s" site.Title site.Params.eventSubtitle }}{{ end }}
+{{ $pageDescription := site.Params.description }}
+{{ with .Params.summary }}{{ $pageDescription = . }}{{ end }}
+{{ with .Description }}{{ $pageDescription = . }}{{ end }}
+<title>{{ $pageTitle }}</title>
+<meta name="description" content="{{ $pageDescription }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">

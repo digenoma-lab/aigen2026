@@ -1,0 +1,10 @@
+<svg width="360" height="144" viewBox="0 0 360 144" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="goreTitle">
+  <title id="goreTitle">Gobierno Regional de O'Higgins</title>
+  <rect width="360" height="144" rx="24" fill="white"/>
+  <rect x="12" y="12" width="336" height="120" rx="18" fill="#F8FBFE" stroke="#D8E4F4"/>
+  <rect x="48" y="44" width="62" height="56" rx="16" fill="#17B6B4"/>
+  <path d="M64 88L79 60L94 88" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M79 60V95" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <text x="136" y="63" fill="#0B1A3A" font-family="Manrope, Segoe UI, sans-serif" font-size="20" font-weight="800">Gobierno Regional</text>
+  <text x="136" y="92" fill="#D84FD3" font-family="Manrope, Segoe UI, sans-serif" font-size="24" font-weight="800">de O'Higgins</text>
+</svg>

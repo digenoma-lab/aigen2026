@@ -1,0 +1,40 @@
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">{{ site.Params.heroKicker }}</p>
+      <h1>{{ site.Params.eventTitle }}</h1>
+      <p class="hero__subtitle">{{ site.Params.eventSubtitle }}</p>
+      <div class="hero__meta" aria-label="Información del evento">
+        <span>{{ site.Params.eventDate }}</span>
+        <span>{{ site.Params.eventLocation }}</span>
+      </div>
+      <p class="hero__text">
+        Un workshop que reúne academia, hospitales, gobierno regional e innovación para explorar cómo la inteligencia artificial y la genómica pueden fortalecer la salud pública.
+      </p>
+      <div class="hero__actions">
+        {{ range site.Params.heroButtons }}
+          <a class="button {{ if eq .variant "secondary" }}button--ghost{{ else }}button--primary{{ end }}" href="{{ .url }}">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero-logo-card">
+        <img class="hero-logo-card__image" src="/images/logoAIGEN2026V5.png" alt="Identidad visual AIGEN 2026">
+      </div>
+      <div class="hero-stats" aria-label="Aspectos destacados del workshop">
+        <article>
+          <strong>2 días</strong>
+          <span>de contenidos y colaboración</span>
+        </article>
+        <article>
+          <strong>6 formatos</strong>
+          <span>keynotes, talks, posters y networking</span>
+        </article>
+        <article>
+          <strong>Enfoque regional</strong>
+          <span>salud pública, innovación y genómica</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

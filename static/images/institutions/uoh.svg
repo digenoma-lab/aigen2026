@@ -1,0 +1,9 @@
+<svg width="360" height="144" viewBox="0 0 360 144" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="uohTitle">
+  <title id="uohTitle">Universidad de O'Higgins</title>
+  <rect width="360" height="144" rx="24" fill="white"/>
+  <rect x="12" y="12" width="336" height="120" rx="18" fill="#F6FAFF" stroke="#D8E4F4"/>
+  <circle cx="82" cy="72" r="34" fill="#0B1A3A"/>
+  <path d="M66 72V54H77V72C77 79.732 82.268 85 90 85C97.732 85 103 79.732 103 72V54H114V72C114 85.807 103.807 96 90 96C76.193 96 66 85.807 66 72Z" fill="#4DD7F0"/>
+  <text x="138" y="67" fill="#0B1A3A" font-family="Manrope, Segoe UI, sans-serif" font-size="22" font-weight="800">Universidad de</text>
+  <text x="138" y="94" fill="#6D4DF2" font-family="Manrope, Segoe UI, sans-serif" font-size="26" font-weight="800">O'Higgins</text>
+</svg>
