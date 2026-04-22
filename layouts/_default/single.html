@@ -32,7 +32,7 @@
         <aside class="stack-card">
           <h2>Fechas clave</h2>
           <ul class="info-list">
-            <li><strong>Apertura:</strong> marzo 2026</li>
+            <li><strong>Apertura:</strong> abril 2026</li>
             <li><strong>Cierre temprano:</strong> junio 2026</li>
             <li><strong>Confirmaciones:</strong> julio 2026</li>
           </ul>
@@ -158,6 +158,27 @@
             <p>{{ .text }}</p>
           </article>
         {{ end }}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container registration-form">
+        <div class="section-heading">
+          <p class="eyebrow">Formulario</p>
+          <h2>Completa tu inscripción en línea</h2>
+          <p>Puedes responder el formulario directamente aquí o abrirlo en Google Forms.</p>
+        </div>
+        <div class="registration-form__card">
+          <iframe
+            class="registration-form__frame"
+            title="Formulario de inscripción AIGEN 2026"
+            src="{{ .Params.form_embed_url }}"
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="registration-form__actions">
+          <a class="button button--primary" href="{{ .Params.form_url }}" target="_blank" rel="noreferrer">Abrir formulario en Google Forms</a>
+        </div>
       </div>
     </section>
   {{ end }}

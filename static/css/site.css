@@ -622,6 +622,31 @@ p {
   justify-content: flex-start;
 }
 
+.registration-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.registration-form__card {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-card);
+}
+
+.registration-form__frame {
+  display: block;
+  width: 100%;
+  min-height: 1180px;
+  border: 0;
+}
+
+.registration-form__actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .cta-banner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -741,6 +766,10 @@ p {
 
   .venue-map__frame {
     min-height: 360px;
+  }
+
+  .registration-form__frame {
+    min-height: 1320px;
   }
 
   .hero__meta,

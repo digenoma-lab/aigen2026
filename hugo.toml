@@ -88,7 +88,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
   [params.contact]
     email = "aigen@uoh.cl"
-    phone = "+56 9 0000 0000"
+    phone = "+56 9 6619 1438"
     city = "Av. Libertador Bernardo O'Higgins 611, Rancagua, Región de O'Higgins"
     organization = "AIGEN 2026"
 
