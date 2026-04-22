@@ -101,11 +101,15 @@
         </div>
         <div class="card-grid card-grid--three">
           {{ range .Params.speakers }}
+            {{ $speaker := . }}
             <article class="feature-card speaker-card">
-              <span class="pill">{{ .role }}</span>
-              <h3>{{ .name }}</h3>
-              <p class="speaker-card__affiliation">{{ .affiliation }}</p>
-              <p>{{ .bio }}</p>
+              {{ with $speaker.image }}
+                <img class="speaker-card__image" src="{{ . }}" alt="{{ $speaker.image_alt | default $speaker.name }}" loading="lazy">
+              {{ end }}
+              <span class="pill">{{ $speaker.role }}</span>
+              <h3>{{ $speaker.name }}</h3>
+              <p class="speaker-card__affiliation">{{ $speaker.affiliation }}</p>
+              <p>{{ $speaker.bio }}</p>
             </article>
           {{ end }}
         </div>

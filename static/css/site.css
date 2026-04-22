@@ -474,6 +474,14 @@ p {
   color: var(--color-muted);
 }
 
+.speaker-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
 .program-preview-grid,
 .program-grid {
   display: grid;

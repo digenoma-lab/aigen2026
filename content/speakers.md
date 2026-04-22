@@ -2,6 +2,12 @@
 title: "Speakers"
 summary: "Espacio para presentar keynote speakers, panelistas e invitados de AIGEN 2026."
 speakers:
+  - name: "Tamara Pérez Jeldres"
+    role: "Talk 2 | 23 de julio"
+    affiliation: "Pontificia Universidad Católica de Chile · Hospital San Borja Arriarán · University of Birmingham"
+    image: "/images/speakers/tamara_perez.jpg"
+    image_alt: "Tamara Pérez Jeldres"
+    bio: "Tamara Pérez Jeldres es gastroenteróloga, especialista en enfermedad inflamatoria intestinal (EII), del Departamento de Gastroenterología de la Pontificia Universidad Católica de Chile y del Instituto Chileno-Japonés de Enfermedades Digestivas (INCHIJAP) del Hospital San Borja Arriarán. Realizó un fellowship clínico en EII en el Hospital Clínic de Barcelona y un fellowship en investigación traslacional en EII en la University of California San Diego y el La Jolla Institute for Immunology. Actualmente cursa un MSc en Bioinformática en la University of Birmingham (Reino Unido). Su investigación se centra en la interacción entre genética, microbiota y factores ambientales en la EII."
   - name: "Keynote speaker por confirmar"
     role: "Keynote"
     affiliation: "Invitado internacional"
