@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
       unsafe = false
 
 [params]
-  description = "Workshop de IA y Genómica para la Salud Pública"
+  description = "Sitio oficial de AIGEN 2026: IA y Genómica para la Salud Pública"
   eventTitle = "AIGEN 2026"
   eventSubtitle = "Workshop de IA y Genómica para la Salud Pública"
   eventDate = "22 y 23 de julio de 2026"
@@ -31,7 +31,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     variant = "secondary"
 
   [[params.highlights]]
-    title = "Keynotes"
+    title = "Conferencias magistrales"
     text = "Conferencias magistrales centradas en IA aplicada, genómica y salud pública."
 
   [[params.highlights]]
@@ -47,8 +47,8 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     text = "Instancia para compartir investigación aplicada, redes de trabajo y casos de uso."
 
   [[params.highlights]]
-    title = "Networking"
-    text = "Vínculo entre academia, hospitales, sector público, innovación y ciencia de datos."
+    title = "Vinculación"
+    text = "Conexión entre academia, hospitales, sector público, innovación y ciencia de datos."
 
   [[params.highlights]]
     title = "Becas y premios"
@@ -104,12 +104,12 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     weight = 20
 
   [[menu.main]]
-    name = "Speakers"
+    name = "Expositores"
     pageRef = "/speakers"
     weight = 30
 
   [[menu.main]]
-    name = "Venue"
+    name = "Lugar"
     pageRef = "/venue"
     weight = 40
 
@@ -119,7 +119,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     weight = 50
 
   [[menu.main]]
-    name = "Organizadores"
+    name = "Organización"
     pageRef = "/organizers-sponsors"
     weight = 60
 

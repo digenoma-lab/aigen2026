@@ -1,13 +1,22 @@
 ---
-title: "Organizers / Sponsors"
+title: "Organización y patrocinio"
 summary: "Equipo organizador, instituciones asociadas y patrocinadores del workshop."
 organizers:
-  - name: "Comité científico"
-    role: "Curaduría académica"
-    text: "Responsable de la línea temática, selección de speakers y coherencia científica del programa."
-  - name: "Comité organizador"
+  - name: "Alex Di Genova"
+    role: "Comité científico"
+    image: "/images/comite-organizador/alex-digenova.jpg"
+    image_alt: "Alex Di Genova"
+    text: "Alex Di Genova es investigador en genómica y bioinformática de la Universidad de O’Higgins. Su trayectoria se centra en el desarrollo de métodos computacionales y en su aplicación a problemas de salud, incluyendo la genómica del cáncer, la medicina de precisión y el análisis de datos ómicos a gran escala."
+  - name: "Carol Moraga Quinteros"
+    role: "Comité científico"
+    image: "/images/comite-organizador/Carol-Moraga.jpg"
+    image_alt: "Carol Moraga Quinteros"
+    text: "Carol Moraga Quinteros es profesora asistente de la Universidad de O’Higgins, especialista en bioinformática, genómica y biología computacional. Su trabajo integra desarrollo algorítmico, análisis de datos ómicos e investigación en especies no modelo. Además, dirige el proyecto FIC HPC-UOH, enfocado en fortalecer capacidades de supercomputación e innovación para salud y medicina de precisión en la región."
+  - name: "Ana María Rusque"
     role: "Operación y coordinación"
-    text: "Encargado de logística, convocatoria, alianzas institucionales y experiencia general del evento."
+    image: "/images/comite-organizador/anamaira-rusque.jpg"
+    image_alt: "Ana María Rusque"
+    text: "Ana María Rusque es Ingeniera Civil Industrial y Coordinadora Ejecutiva de los proyectos de Supercomputación e Innovación en Salud y CUBI en la Universidad de O’Higgins. Su trayectoria se ha centrado en la gestión administrativa, financiera y operativa de iniciativas institucionales, con foco en eficiencia, coordinación e innovación."
   - name: "Enlace territorial"
     role: "Articulación regional"
     text: "Conecta el workshop con actores públicos, hospitales, universidades y ecosistema de innovación de la región."
@@ -15,9 +24,5 @@ sponsors:
   - "Universidad de O'Higgins"
   - "Gobierno Regional de O'Higgins"
   - "Hospital Dr. Franco Ravera Zunino"
-  - "Aliados estratégicos por confirmar"
+  - "Aliados estratégicos"
 ---
-
-Esta página reúne a las instituciones impulsoras de AIGEN 2026 y deja un espacio claro para agregar patrocinadores, colaboradores y aliados estratégicos a medida que se formalicen.
-
-La estructura permite ampliar fácilmente logos, descripciones y equipos responsables sin alterar el diseño general del sitio.

@@ -1,5 +1,5 @@
 ---
-title: "Venue"
+title: "Lugar"
 summary: "Información de sede, acceso y logística para participantes del workshop."
 city: "Rancagua, Región de O'Higgins"
 place: "Universidad de O'Higgins"
@@ -12,7 +12,7 @@ details:
   - title: "Acceso"
     text: "La ubicación ofrece acceso central dentro de la ciudad de Rancagua y facilita la llegada de participantes desde instituciones regionales y nacionales."
   - title: "Experiencia"
-    text: "El workshop considera registro presencial, coffee breaks, posters y espacios de conversación entre instituciones participantes."
+    text: "El workshop considera registro presencial, pausas de café, pósteres y espacios de conversación entre instituciones participantes."
 ---
 
 La sede del evento será la **Universidad de O'Higgins**, ubicada en **Av. Libertador Bernardo O'Higgins 611, Rancagua, Región de O'Higgins**.

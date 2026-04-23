@@ -1,4 +1,7 @@
 {{ define "main" }}
+  {{ $baseFile := .File.BaseFileName }}
+  {{ $hasSidebar := or (eq $baseFile "program") (eq $baseFile "registration") (eq $baseFile "venue") (eq $baseFile "contact") }}
+  {{ $hasIntroContent := gt (len (trim .Plain "\n\r\t ")) 0 }}
   <section class="page-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__copy">
@@ -11,55 +14,59 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container page-grid">
-      <article class="prose-card">
-        {{ .Content }}
-      </article>
+  {{ if or $hasIntroContent $hasSidebar }}
+    <section class="section">
+      <div class="container page-grid">
+        {{ if $hasIntroContent }}
+          <article class="prose-card">
+            {{ .Content }}
+          </article>
+        {{ end }}
 
-      {{ if eq .File.BaseFileName "program" }}
-        <aside class="stack-card">
-          <h2>Resumen rápido</h2>
-          <p>Dos jornadas que conectan investigación, implementación y colaboración regional.</p>
-          <ul class="check-list">
-            <li>Keynotes y keynote internacional</li>
-            <li>Conversatorios con foco público-sanitario</li>
-            <li>Flash talks y posters</li>
-            <li>Networking, becas y premiación</li>
-          </ul>
-        </aside>
-      {{ else if eq .File.BaseFileName "registration" }}
-        <aside class="stack-card">
-          <h2>Fechas clave</h2>
-          <ul class="info-list">
-            <li><strong>Apertura:</strong> abril 2026</li>
-            <li><strong>Cierre temprano:</strong> junio 2026</li>
-            <li><strong>Confirmaciones:</strong> julio 2026</li>
-          </ul>
-        </aside>
-      {{ else if eq .File.BaseFileName "venue" }}
-        <aside class="stack-card">
-          <h2>Ubicación</h2>
-          <ul class="info-list">
-            <li><strong>Ciudad:</strong> {{ .Params.city }}</li>
-            <li><strong>Espacio:</strong> {{ .Params.place }}</li>
-            <li><strong>Formato:</strong> presencial</li>
-          </ul>
-        </aside>
-      {{ else if eq .File.BaseFileName "contact" }}
-        <aside class="stack-card">
-          <h2>Canales</h2>
-          <ul class="info-list">
-            <li><strong>Email:</strong> <a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
-            <li><strong>Teléfono:</strong> {{ site.Params.contact.phone }}</li>
-            <li><strong>Ciudad:</strong> {{ site.Params.contact.city }}</li>
-          </ul>
-        </aside>
-      {{ end }}
-    </div>
-  </section>
+        {{ if eq $baseFile "program" }}
+          <aside class="stack-card">
+            <h2>Resumen rápido</h2>
+            <p>Dos jornadas que conectan investigación, implementación y colaboración regional.</p>
+            <ul class="check-list">
+              <li>Conferencias magistrales</li>
+              <li>Conversatorios con foco público-sanitario</li>
+              <li>Flash talks y pósteres</li>
+              <li>Vinculación, becas y premiación</li>
+            </ul>
+          </aside>
+        {{ else if eq $baseFile "registration" }}
+          <aside class="stack-card">
+            <h2>Fechas clave</h2>
+            <ul class="info-list">
+              <li><strong>Apertura:</strong> abril 2026</li>
+              <li><strong>Cierre temprano:</strong> junio 2026</li>
+              <li><strong>Confirmaciones:</strong> julio 2026</li>
+            </ul>
+          </aside>
+        {{ else if eq $baseFile "venue" }}
+          <aside class="stack-card">
+            <h2>Ubicación</h2>
+            <ul class="info-list">
+              <li><strong>Ciudad:</strong> {{ .Params.city }}</li>
+              <li><strong>Espacio:</strong> {{ .Params.place }}</li>
+              <li><strong>Formato:</strong> presencial</li>
+            </ul>
+          </aside>
+        {{ else if eq $baseFile "contact" }}
+          <aside class="stack-card">
+            <h2>Canales</h2>
+            <ul class="info-list">
+              <li><strong>Email:</strong> <a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
+              <li><strong>Teléfono:</strong> {{ site.Params.contact.phone }}</li>
+              <li><strong>Ciudad:</strong> {{ site.Params.contact.city }}</li>
+            </ul>
+          </aside>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
 
-  {{ if eq .File.BaseFileName "program" }}
+  {{ if eq $baseFile "program" }}
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
@@ -92,12 +99,12 @@
     </section>
   {{ end }}
 
-  {{ if eq .File.BaseFileName "speakers" }}
+  {{ if eq $baseFile "speakers" }}
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Invitados</p>
-          <h2>Speakers y perfiles</h2>
+          <h2>Expositores y perfiles</h2>
         </div>
         <div class="card-grid card-grid--three">
           {{ range .Params.speakers }}
@@ -117,7 +124,7 @@
     </section>
   {{ end }}
 
-  {{ if eq .File.BaseFileName "venue" }}
+  {{ if eq $baseFile "venue" }}
     <section class="section section--soft">
       <div class="container card-grid">
         {{ range .Params.details }}
@@ -153,7 +160,7 @@
     </section>
   {{ end }}
 
-  {{ if eq .File.BaseFileName "registration" }}
+  {{ if eq $baseFile "registration" }}
     <section class="section section--soft">
       <div class="container card-grid">
         {{ range .Params.registration_cards }}
@@ -187,7 +194,7 @@
     </section>
   {{ end }}
 
-  {{ if eq .File.BaseFileName "organizers-sponsors" }}
+  {{ if eq $baseFile "organizers-sponsors" }}
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
@@ -196,15 +203,19 @@
         </div>
         <div class="card-grid card-grid--three">
           {{ range .Params.organizers }}
+            {{ $organizer := . }}
             <article class="feature-card">
-              <h3>{{ .name }}</h3>
-              <p class="speaker-card__affiliation">{{ .role }}</p>
-              <p>{{ .text }}</p>
+              {{ with $organizer.image }}
+                <img class="speaker-card__image" src="{{ . }}" alt="{{ $organizer.image_alt | default $organizer.name }}" loading="lazy">
+              {{ end }}
+              <h3>{{ $organizer.name }}</h3>
+              <p class="speaker-card__affiliation">{{ $organizer.role }}</p>
+              <p>{{ $organizer.text }}</p>
             </article>
           {{ end }}
         </div>
         <div class="sponsor-block">
-          <h3>Sponsors y aliados</h3>
+          <h3>Patrocinadores y aliados</h3>
           <div class="tag-row">
             {{ range .Params.sponsors }}
               <span class="tag">{{ . }}</span>
@@ -215,7 +226,7 @@
     </section>
   {{ end }}
 
-  {{ if eq .File.BaseFileName "contact" }}
+  {{ if eq $baseFile "contact" }}
     <section class="section section--soft">
       <div class="container card-grid">
         {{ range .Params.channels }}
