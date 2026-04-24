@@ -121,6 +121,24 @@ other = "Guests"
 [speakers_title]
 other = "Speakers and profiles"
 
+[speakers_group_keynote]
+other = "Keynotes"
+
+[speakers_group_talk]
+other = "Talks"
+
+[speakers_group_panel]
+other = "Panel discussion"
+
+[speakers_group_flash]
+other = "Flash talks"
+
+[speakers_group_poster]
+other = "Posters"
+
+[speakers_group_moderation]
+other = "Moderation"
+
 [venue_map_eyebrow]
 other = "Map"
 

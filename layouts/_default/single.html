@@ -103,22 +103,56 @@
   {{ if eq $baseFile "speakers" }}
     <section class="section section--soft">
       <div class="container">
+        {{ $scratch := newScratch }}
+        {{ $scratch.Set "keynote" (slice) }}
+        {{ $scratch.Set "talk" (slice) }}
+        {{ $scratch.Set "panel" (slice) }}
+        {{ $scratch.Set "flash" (slice) }}
+        {{ $scratch.Set "poster" (slice) }}
+        {{ $scratch.Set "moderation" (slice) }}
+        {{ range .Params.speakers }}
+          {{ $role := lower .role }}
+          {{ if in $role "flash" }}
+            {{ $scratch.Add "flash" (slice .) }}
+          {{ else if or (in $role "póster") (in $role "poster") }}
+            {{ $scratch.Add "poster" (slice .) }}
+          {{ else if or (in $role "moderación") (in $role "moderation") }}
+            {{ $scratch.Add "moderation" (slice .) }}
+          {{ else if or (in $role "conversatorio") (in $role "panel discussion") }}
+            {{ $scratch.Add "panel" (slice .) }}
+          {{ else if or (in $role "conferencia magistral") (in $role "keynote") }}
+            {{ $scratch.Add "keynote" (slice .) }}
+          {{ else if or (in $role "charla") (in $role "talk") }}
+            {{ $scratch.Add "talk" (slice .) }}
+          {{ end }}
+        {{ end }}
         <div class="section-heading">
           <p class="eyebrow">{{ i18n "speakers_eyebrow" }}</p>
           <h2>{{ i18n "speakers_title" }}</h2>
         </div>
-        <div class="card-grid card-grid--three">
-          {{ range .Params.speakers }}
-            {{ $speaker := . }}
-            <article class="feature-card speaker-card">
-              {{ with $speaker.image }}
-                <img class="speaker-card__image" src="{{ . }}" alt="{{ $speaker.image_alt | default $speaker.name }}" loading="lazy">
-              {{ end }}
-              <span class="pill">{{ $speaker.role }}</span>
-              <h3>{{ $speaker.name }}</h3>
-              <p class="speaker-card__affiliation">{{ $speaker.affiliation }}</p>
-              <p>{{ $speaker.bio }}</p>
-            </article>
+        <div class="speaker-groups">
+          {{ range slice "keynote" "talk" "panel" "flash" "poster" "moderation" }}
+            {{ $groupKey := . }}
+            {{ $items := sort ($scratch.Get $groupKey) "name" }}
+            {{ if gt (len $items) 0 }}
+              <section class="speaker-group">
+                <h3 class="speaker-group__title">{{ i18n (printf "speakers_group_%s" $groupKey) }}</h3>
+                <div class="card-grid card-grid--three">
+                  {{ range $items }}
+                    {{ $speaker := . }}
+                    <article class="feature-card speaker-card">
+                      {{ with $speaker.image }}
+                        <img class="speaker-card__image" src="{{ . }}" alt="{{ $speaker.image_alt | default $speaker.name }}" loading="lazy">
+                      {{ end }}
+                      <span class="pill">{{ $speaker.role }}</span>
+                      <h3>{{ $speaker.name }}</h3>
+                      <p class="speaker-card__affiliation">{{ $speaker.affiliation }}</p>
+                      <p>{{ $speaker.bio }}</p>
+                    </article>
+                  {{ end }}
+                </div>
+              </section>
+            {{ end }}
           {{ end }}
         </div>
       </div>

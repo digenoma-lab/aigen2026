@@ -121,6 +121,24 @@ other = "Invitados"
 [speakers_title]
 other = "Expositores y perfiles"
 
+[speakers_group_keynote]
+other = "Conferencias magistrales"
+
+[speakers_group_talk]
+other = "Charlas"
+
+[speakers_group_panel]
+other = "Conversatorio"
+
+[speakers_group_flash]
+other = "Flash talks"
+
+[speakers_group_poster]
+other = "Pósteres"
+
+[speakers_group_moderation]
+other = "Moderación"
+
 [venue_map_eyebrow]
 other = "Mapa"
 
