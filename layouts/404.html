@@ -2,10 +2,10 @@
   <section class="page-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__copy">
-        <p class="eyebrow">Página no encontrada</p>
+        <p class="eyebrow">{{ i18n "page_not_found" }}</p>
         <h1>404</h1>
-        <p class="page-hero__summary">La página solicitada no existe o cambió de ubicación.</p>
-        <a class="button button--primary" href="/">Volver al inicio</a>
+        <p class="page-hero__summary">{{ i18n "page_not_found_summary" }}</p>
+        <a class="button button--primary" href="{{ site.Home.RelPermalink }}">{{ i18n "back_home" }}</a>
       </div>
     </div>
   </section>

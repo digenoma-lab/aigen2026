@@ -1,7 +1,8 @@
 {{ define "main" }}
-  {{ $baseFile := .File.BaseFileName }}
+  {{ $baseFile := .File.TranslationBaseName }}
   {{ $hasSidebar := or (eq $baseFile "program") (eq $baseFile "registration") (eq $baseFile "venue") (eq $baseFile "contact") }}
   {{ $hasIntroContent := gt (len (trim .Plain "\n\r\t ")) 0 }}
+  {{ $programData := index site.Data.program site.Language.Lang }}
   <section class="page-hero">
     <div class="container page-hero__inner">
       <div class="page-hero__copy">
@@ -25,40 +26,40 @@
 
         {{ if eq $baseFile "program" }}
           <aside class="stack-card">
-            <h2>Resumen rápido</h2>
-            <p>Dos jornadas que conectan investigación, implementación y colaboración regional.</p>
+            <h2>{{ i18n "program_quick_title" }}</h2>
+            <p>{{ i18n "program_quick_text" }}</p>
             <ul class="check-list">
-              <li>Conferencias magistrales</li>
-              <li>Conversatorios con foco público-sanitario</li>
-              <li>Flash talks y pósteres</li>
-              <li>Vinculación, becas y premiación</li>
+              <li>{{ i18n "program_quick_1" }}</li>
+              <li>{{ i18n "program_quick_2" }}</li>
+              <li>{{ i18n "program_quick_3" }}</li>
+              <li>{{ i18n "program_quick_4" }}</li>
             </ul>
           </aside>
         {{ else if eq $baseFile "registration" }}
           <aside class="stack-card">
-            <h2>Fechas clave</h2>
+            <h2>{{ i18n "key_dates_title" }}</h2>
             <ul class="info-list">
-              <li><strong>Apertura:</strong> abril 2026</li>
-              <li><strong>Cierre temprano:</strong> junio 2026</li>
-              <li><strong>Confirmaciones:</strong> julio 2026</li>
+              <li><strong>{{ i18n "key_dates_opening_label" }}:</strong> {{ i18n "key_dates_opening_value" }}</li>
+              <li><strong>{{ i18n "key_dates_early_close_label" }}:</strong> {{ i18n "key_dates_early_close_value" }}</li>
+              <li><strong>{{ i18n "key_dates_confirmations_label" }}:</strong> {{ i18n "key_dates_confirmations_value" }}</li>
             </ul>
           </aside>
         {{ else if eq $baseFile "venue" }}
           <aside class="stack-card">
-            <h2>Ubicación</h2>
+            <h2>{{ i18n "location_title" }}</h2>
             <ul class="info-list">
-              <li><strong>Ciudad:</strong> {{ .Params.city }}</li>
-              <li><strong>Espacio:</strong> {{ .Params.place }}</li>
-              <li><strong>Formato:</strong> presencial</li>
+              <li><strong>{{ i18n "location_city_label" }}:</strong> {{ .Params.city }}</li>
+              <li><strong>{{ i18n "location_place_label" }}:</strong> {{ .Params.place }}</li>
+              <li><strong>{{ i18n "location_format_label" }}:</strong> {{ i18n "location_format_value" }}</li>
             </ul>
           </aside>
         {{ else if eq $baseFile "contact" }}
           <aside class="stack-card">
-            <h2>Canales</h2>
+            <h2>{{ i18n "channels_title" }}</h2>
             <ul class="info-list">
-              <li><strong>Email:</strong> <a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
-              <li><strong>Teléfono:</strong> {{ site.Params.contact.phone }}</li>
-              <li><strong>Ciudad:</strong> {{ site.Params.contact.city }}</li>
+              <li><strong>{{ i18n "contact_email_label" }}:</strong> <a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
+              <li><strong>{{ i18n "contact_phone_label" }}:</strong> {{ site.Params.contact.phone }}</li>
+              <li><strong>{{ i18n "contact_city_label" }}:</strong> {{ site.Params.contact.city }}</li>
             </ul>
           </aside>
         {{ end }}
@@ -70,11 +71,11 @@
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Programa completo</p>
-          <h2>Agenda por jornada</h2>
+          <p class="eyebrow">{{ i18n "program_full_eyebrow" }}</p>
+          <h2>{{ i18n "program_agenda_title" }}</h2>
         </div>
         <div class="program-grid">
-          {{ range site.Data.program.days }}
+          {{ range $programData.days }}
             <article class="program-card">
               <div class="program-card__top">
                 <p class="program-card__date">{{ .full_date }}</p>
@@ -103,8 +104,8 @@
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Invitados</p>
-          <h2>Expositores y perfiles</h2>
+          <p class="eyebrow">{{ i18n "speakers_eyebrow" }}</p>
+          <h2>{{ i18n "speakers_title" }}</h2>
         </div>
         <div class="card-grid card-grid--three">
           {{ range .Params.speakers }}
@@ -139,14 +140,14 @@
     <section class="section">
       <div class="container venue-map">
         <div class="section-heading">
-          <p class="eyebrow">Mapa</p>
-          <h2>Cómo llegar a la Universidad de O'Higgins</h2>
+          <p class="eyebrow">{{ i18n "venue_map_eyebrow" }}</p>
+          <h2>{{ i18n "venue_map_title" }}</h2>
           <p>{{ .Params.address }}</p>
         </div>
         <div class="venue-map__card">
           <iframe
             class="venue-map__frame"
-            title="Mapa de la Universidad de O'Higgins"
+            title="{{ i18n "venue_map_frame_title" }}"
             src="{{ .Params.map_embed_url }}"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -154,7 +155,7 @@
           </iframe>
         </div>
         <div class="venue-map__actions">
-          <a class="button button--primary" href="{{ .Params.map_directions_url }}" target="_blank" rel="noreferrer">Abrir en Google Maps</a>
+          <a class="button button--primary" href="{{ .Params.map_directions_url }}" target="_blank" rel="noreferrer">{{ i18n "open_google_maps" }}</a>
         </div>
       </div>
     </section>
@@ -175,20 +176,20 @@
     <section class="section">
       <div class="container registration-form">
         <div class="section-heading">
-          <p class="eyebrow">Formulario</p>
-          <h2>Completa tu inscripción en línea</h2>
-          <p>Puedes responder el formulario directamente aquí o abrirlo en Google Forms.</p>
+          <p class="eyebrow">{{ i18n "registration_form_eyebrow" }}</p>
+          <h2>{{ i18n "registration_form_title" }}</h2>
+          <p>{{ i18n "registration_form_text" }}</p>
         </div>
         <div class="registration-form__card">
           <iframe
             class="registration-form__frame"
-            title="Formulario de inscripción AIGEN 2026"
+            title="{{ i18n "registration_form_frame_title" }}"
             src="{{ .Params.form_embed_url }}"
             loading="lazy">
           </iframe>
         </div>
         <div class="registration-form__actions">
-          <a class="button button--primary" href="{{ .Params.form_url }}" target="_blank" rel="noreferrer">Abrir formulario en Google Forms</a>
+          <a class="button button--primary" href="{{ .Params.form_url }}" target="_blank" rel="noreferrer">{{ i18n "open_google_form" }}</a>
         </div>
       </div>
     </section>
@@ -198,8 +199,8 @@
     <section class="section section--soft">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Equipo e instituciones</p>
-          <h2>Organización y patrocinio</h2>
+          <p class="eyebrow">{{ i18n "organizers_eyebrow" }}</p>
+          <h2>{{ i18n "organizers_title" }}</h2>
         </div>
         <div class="card-grid card-grid--three">
           {{ range .Params.organizers }}
@@ -215,7 +216,7 @@
           {{ end }}
         </div>
         <div class="sponsor-block">
-          <h3>Patrocinadores y aliados</h3>
+          <h3>{{ i18n "sponsors_title" }}</h3>
           <div class="tag-row">
             {{ range .Params.sponsors }}
               <span class="tag">{{ . }}</span>

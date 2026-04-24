@@ -1,13 +1,13 @@
 <footer class="site-footer">
   <div class="container site-footer__grid">
     <div>
-      <a class="brand brand--footer" href="/">
-        <img class="brand__image" src="/images/logoAIGEN2026V5.png" alt="Logo de AIGEN 2026">
+      <a class="brand brand--footer" href="{{ site.Home.RelPermalink }}">
+        <img class="brand__image" src="/images/logoAIGEN2026V5.png" alt="{{ i18n "brand_alt" }}">
       </a>
       <p class="site-footer__tagline">{{ site.Params.footerTagline }}</p>
     </div>
     <div>
-      <h2>Contacto</h2>
+      <h2>{{ i18n "contact_heading" }}</h2>
       <ul class="footer-list">
         <li><a href="mailto:{{ site.Params.contact.email }}">{{ site.Params.contact.email }}</a></li>
         <li>{{ site.Params.contact.phone }}</li>
@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div>
-      <h2>Instituciones</h2>
+      <h2>{{ i18n "institutions_heading" }}</h2>
       <ul class="footer-list">
         {{ range site.Params.institutions }}
           <li><a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .name }}</a></li>

@@ -17,4 +17,4 @@ details:
 
 La sede del evento será la **Universidad de O'Higgins**, ubicada en **Av. Libertador Bernardo O'Higgins 611, Rancagua, Región de O'Higgins**.
 
-La ubicación ofrece un punto de encuentro adecuado para participantes provenientes de universidades, hospitales, servicios de salud, gobierno e industria. Esta página puede seguir ampliándose con mapa, estacionamientos, accesos y recomendaciones logísticas.
+La ubicación ofrece un punto de encuentro adecuado para participantes provenientes de universidades, hospitales, servicios de salud, gobierno e industria.

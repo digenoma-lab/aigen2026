@@ -1,4 +1,4 @@
-<nav class="site-nav" aria-label="Navegación principal">
+<nav class="site-nav" aria-label="{{ i18n "main_navigation" }}">
   <ul>
     {{ range site.Menus.main }}
       {{ $isCurrent := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq $.RelPermalink .URL) }}
@@ -7,4 +7,5 @@
       </li>
     {{ end }}
   </ul>
+  {{ partial "language-switcher.html" . }}
 </nav>

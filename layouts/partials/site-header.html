@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="/" aria-label="Ir a la portada de AIGEN 2026">
-      <img class="brand__image" src="/images/logoAIGEN2026V5.png" alt="Logo de AIGEN 2026">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ i18n "home_link_aria" }}">
+      <img class="brand__image" src="/images/logoAIGEN2026V5.png" alt="{{ i18n "brand_alt" }}">
     </a>
     {{ partial "navigation.html" . }}
   </div>

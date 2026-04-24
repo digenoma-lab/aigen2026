@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode }}">
+<html lang="{{ site.Language.Lang }}">
   <head>
     {{ partial "head.html" . }}
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <a class="skip-link" href="#main-content">{{ i18n "skip_to_content" }}</a>
     {{ partial "site-header.html" . }}
     <main id="main-content">
       {{ block "main" . }}{{ end }}

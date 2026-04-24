@@ -1,5 +1,4 @@
 baseURL = "https://aigen2026.netlify.app/"
-languageCode = "es-cl"
 title = "AIGEN 2026"
 defaultContentLanguage = "es"
 enableRobotsTXT = true
@@ -10,120 +9,287 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     [markup.goldmark.renderer]
       unsafe = false
 
-[params]
-  description = "Sitio oficial de AIGEN 2026: IA y Genómica para la Salud Pública"
-  eventTitle = "AIGEN 2026"
-  eventSubtitle = "Workshop de IA y Genómica para la Salud Pública"
-  eventDate = "22 y 23 de julio de 2026"
-  eventLocation = "Universidad de O'Higgins, Rancagua"
-  heroKicker = "Encuentro académico y público-sanitario"
-  footerTagline = "Un espacio de encuentro entre IA, genómica e innovación para la salud pública regional."
-  registrationUrl = "#registro"
+[languages]
+  [languages.es]
+    languageCode = "es-CL"
+    languageName = "Español"
+    weight = 1
+    title = "AIGEN 2026"
 
-  [[params.heroButtons]]
-    label = "Ver programa"
-    url = "/program/"
-    variant = "primary"
+    [languages.es.params]
+      description = "Sitio oficial de AIGEN 2026: IA y Genómica para la Salud Pública"
+      eventTitle = "AIGEN 2026"
+      eventSubtitle = "Workshop de IA y Genómica para la Salud Pública"
+      eventDate = "22 y 23 de julio de 2026"
+      eventLocation = "Universidad de O'Higgins, Rancagua"
+      heroKicker = "Encuentro académico y público-sanitario"
+      heroText = "Un workshop que reúne academia, hospitales, gobierno regional e innovación para explorar cómo la inteligencia artificial y la genómica pueden fortalecer la salud pública."
+      homeIntroEyebrow = "Sobre el workshop"
+      homeIntroTitle = "IA, genómica e innovación pública en un mismo espacio"
+      highlightsEyebrow = "Destacados"
+      highlightsTitle = "Una agenda pensada para colaboración real"
+      institutionsEyebrow = "Instituciones"
+      institutionsTitle = "Organizan y articulan este encuentro"
+      institutionsAriaLabel = "Instituciones participantes"
+      footerTagline = "Un espacio de encuentro entre IA, genómica e innovación para la salud pública regional."
 
-  [[params.heroButtons]]
-    label = "Inscripciones"
-    url = "/registration/"
-    variant = "secondary"
+      [[languages.es.params.heroButtons]]
+        label = "Ver programa"
+        pageRef = "/program"
+        variant = "primary"
 
-  [[params.highlights]]
-    title = "Conferencias magistrales"
-    text = "Conferencias magistrales centradas en IA aplicada, genómica y salud pública."
+      [[languages.es.params.heroButtons]]
+        label = "Inscripciones"
+        pageRef = "/registration"
+        variant = "secondary"
 
-  [[params.highlights]]
-    title = "Conversatorios"
-    text = "Espacios de discusión sobre adopción tecnológica, colaboración regional e innovación."
+      [[languages.es.params.heroStats]]
+        title = "2 días"
+        text = "de contenidos y colaboración"
 
-  [[params.highlights]]
-    title = "Flash talks"
-    text = "Presentaciones breves para proyectos emergentes, pilotos y resultados tempranos."
+      [[languages.es.params.heroStats]]
+        title = "6 formatos"
+        text = "conferencias, charlas, flash talks y pósteres"
 
-  [[params.highlights]]
-    title = "Sesión de pósteres"
-    text = "Instancia para compartir investigación aplicada, redes de trabajo y casos de uso."
+      [[languages.es.params.heroStats]]
+        title = "Enfoque regional"
+        text = "salud pública, innovación y genómica"
 
-  [[params.highlights]]
-    title = "Vinculación"
-    text = "Conexión entre academia, hospitales, sector público, innovación y ciencia de datos."
+      [[languages.es.params.highlights]]
+        title = "Conferencias magistrales"
+        text = "Conferencias magistrales centradas en IA aplicada, genómica y salud pública."
 
-  [[params.highlights]]
-    title = "Becas y premios"
-    text = "Apoyo para participación y reconocimiento a contribuciones destacadas."
+      [[languages.es.params.highlights]]
+        title = "Conversatorios"
+        text = "Espacios de discusión sobre adopción tecnológica, colaboración regional e innovación."
 
-  [[params.institutions]]
-    name = "Universidad de O'Higgins"
-    image = "/images/institutions/uoh.png"
-    alt = "Logo de la Universidad de O'Higgins"
-    url = "https://www.uoh.cl/"
-    width = 271
-    height = 82
+      [[languages.es.params.highlights]]
+        title = "Flash talks"
+        text = "Presentaciones breves para proyectos emergentes, pilotos y resultados tempranos."
 
-  [[params.institutions]]
-    name = "Gobierno Regional de O'Higgins"
-    image = "/images/institutions/gore-ohiggins.png"
-    alt = "Logo del Gobierno Regional de O'Higgins"
-    url = "https://www.goreohiggins.cl/"
-    width = 194
-    height = 103
+      [[languages.es.params.highlights]]
+        title = "Sesión de pósteres"
+        text = "Instancia para compartir investigación aplicada, redes de trabajo y casos de uso."
 
-  [[params.institutions]]
-    name = "Hospital Dr. Franco Ravera Zunino"
-    image = "/images/institutions/hospital-franco-ravera.png"
-    alt = "Logo del Hospital Dr. Franco Ravera Zunino"
-    url = "https://hospitalfrancoravera.cl/"
-    width = 286
-    height = 96
+      [[languages.es.params.highlights]]
+        title = "Vinculación"
+        text = "Conexión entre academia, hospitales, sector público, innovación y ciencia de datos."
 
-  [params.registration]
-    title = "Inscripciones abiertas"
-    text = "Reserva tu participación, postula a becas y mantente al día con novedades del workshop."
-    primaryLabel = "Ir a registro"
-    primaryUrl = "/registration/"
-    secondaryLabel = "Contacto"
-    secondaryUrl = "/contact/"
+      [[languages.es.params.highlights]]
+        title = "Becas y premios"
+        text = "Apoyo para participación y reconocimiento a contribuciones destacadas."
 
-  [params.contact]
-    email = "aigen@uoh.cl"
-    phone = "+56 9 6619 1438"
-    city = "Av. Libertador Bernardo O'Higgins 611, Rancagua, Región de O'Higgins"
-    organization = "AIGEN 2026"
+      [[languages.es.params.institutions]]
+        name = "Universidad de O'Higgins"
+        image = "/images/institutions/uoh.png"
+        alt = "Logo de la Universidad de O'Higgins"
+        url = "https://www.uoh.cl/"
+        width = 271
+        height = 82
 
-[menu]
-  [[menu.main]]
-    name = "Inicio"
-    pageRef = "/"
-    weight = 10
+      [[languages.es.params.institutions]]
+        name = "Gobierno Regional de O'Higgins"
+        image = "/images/institutions/gore-ohiggins.png"
+        alt = "Logo del Gobierno Regional de O'Higgins"
+        url = "https://www.goreohiggins.cl/"
+        width = 194
+        height = 103
 
-  [[menu.main]]
-    name = "Programa"
-    pageRef = "/program"
-    weight = 20
+      [[languages.es.params.institutions]]
+        name = "Hospital Dr. Franco Ravera Zunino"
+        image = "/images/institutions/hospital-franco-ravera.png"
+        alt = "Logo del Hospital Dr. Franco Ravera Zunino"
+        url = "https://hospitalfrancoravera.cl/"
+        width = 286
+        height = 96
 
-  [[menu.main]]
-    name = "Expositores"
-    pageRef = "/speakers"
-    weight = 30
+      [languages.es.params.registration]
+        title = "Inscripciones abiertas"
+        text = "Reserva tu participación, postula a becas y mantente al día con novedades del workshop."
+        primaryLabel = "Ir a registro"
+        primaryPageRef = "/registration"
+        secondaryLabel = "Contacto"
+        secondaryPageRef = "/contact"
 
-  [[menu.main]]
-    name = "Lugar"
-    pageRef = "/venue"
-    weight = 40
+      [languages.es.params.contact]
+        email = "aigen@uoh.cl"
+        phone = "+56 9 6619 1438"
+        city = "Av. Libertador Bernardo O'Higgins 611, Rancagua, Región de O'Higgins"
+        organization = "AIGEN 2026"
 
-  [[menu.main]]
-    name = "Registro"
-    pageRef = "/registration"
-    weight = 50
+    [[languages.es.menu.main]]
+      name = "Inicio"
+      pageRef = "/"
+      weight = 10
 
-  [[menu.main]]
-    name = "Organización"
-    pageRef = "/organizers-sponsors"
-    weight = 60
+    [[languages.es.menu.main]]
+      name = "Programa"
+      pageRef = "/program"
+      weight = 20
 
-  [[menu.main]]
-    name = "Contacto"
-    pageRef = "/contact"
-    weight = 70
+    [[languages.es.menu.main]]
+      name = "Expositores"
+      pageRef = "/speakers"
+      weight = 30
+
+    [[languages.es.menu.main]]
+      name = "Lugar"
+      pageRef = "/venue"
+      weight = 40
+
+    [[languages.es.menu.main]]
+      name = "Registro"
+      pageRef = "/registration"
+      weight = 50
+
+    [[languages.es.menu.main]]
+      name = "Organización"
+      pageRef = "/organizers-sponsors"
+      weight = 60
+
+    [[languages.es.menu.main]]
+      name = "Contacto"
+      pageRef = "/contact"
+      weight = 70
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    weight = 2
+    title = "AIGEN 2026"
+
+    [languages.en.params]
+      description = "Official website of AIGEN 2026: AI and Genomics for Public Health"
+      eventTitle = "AIGEN 2026"
+      eventSubtitle = "Workshop on AI and Genomics for Public Health"
+      eventDate = "July 22-23, 2026"
+      eventLocation = "University of O'Higgins, Rancagua"
+      heroKicker = "Academic and public-health meeting"
+      heroText = "A workshop that brings together academia, hospitals, regional government, and innovation to explore how artificial intelligence and genomics can strengthen public health."
+      homeIntroEyebrow = "About the workshop"
+      homeIntroTitle = "AI, genomics, and public innovation in one place"
+      highlightsEyebrow = "Highlights"
+      highlightsTitle = "An agenda designed for real collaboration"
+      institutionsEyebrow = "Institutions"
+      institutionsTitle = "The institutions organizing and connecting this meeting"
+      institutionsAriaLabel = "Participating institutions"
+      footerTagline = "A meeting space connecting AI, genomics, and innovation for regional public health."
+
+      [[languages.en.params.heroButtons]]
+        label = "View program"
+        pageRef = "/program"
+        variant = "primary"
+
+      [[languages.en.params.heroButtons]]
+        label = "Register"
+        pageRef = "/registration"
+        variant = "secondary"
+
+      [[languages.en.params.heroStats]]
+        title = "2 days"
+        text = "of content and collaboration"
+
+      [[languages.en.params.heroStats]]
+        title = "6 formats"
+        text = "keynotes, talks, flash talks, and posters"
+
+      [[languages.en.params.heroStats]]
+        title = "Regional focus"
+        text = "public health, innovation, and genomics"
+
+      [[languages.en.params.highlights]]
+        title = "Keynotes"
+        text = "Keynote sessions focused on applied AI, genomics, and public health."
+
+      [[languages.en.params.highlights]]
+        title = "Panel discussions"
+        text = "Spaces for discussion on technology adoption, regional collaboration, and innovation."
+
+      [[languages.en.params.highlights]]
+        title = "Flash talks"
+        text = "Short presentations for emerging projects, pilots, and early-stage results."
+
+      [[languages.en.params.highlights]]
+        title = "Poster session"
+        text = "A space to share applied research, collaboration networks, and use cases."
+
+      [[languages.en.params.highlights]]
+        title = "Institutional engagement"
+        text = "Connections across academia, hospitals, the public sector, innovation, and data science."
+
+      [[languages.en.params.highlights]]
+        title = "Scholarships and awards"
+        text = "Support for participation and recognition of outstanding contributions."
+
+      [[languages.en.params.institutions]]
+        name = "University of O'Higgins"
+        image = "/images/institutions/uoh.png"
+        alt = "University of O'Higgins logo"
+        url = "https://www.uoh.cl/"
+        width = 271
+        height = 82
+
+      [[languages.en.params.institutions]]
+        name = "O'Higgins Regional Government"
+        image = "/images/institutions/gore-ohiggins.png"
+        alt = "O'Higgins Regional Government logo"
+        url = "https://www.goreohiggins.cl/"
+        width = 194
+        height = 103
+
+      [[languages.en.params.institutions]]
+        name = "Dr. Franco Ravera Zunino Hospital"
+        image = "/images/institutions/hospital-franco-ravera.png"
+        alt = "Dr. Franco Ravera Zunino Hospital logo"
+        url = "https://hospitalfrancoravera.cl/"
+        width = 286
+        height = 96
+
+      [languages.en.params.registration]
+        title = "Registration open"
+        text = "Reserve your participation, apply for scholarships, and stay up to date with workshop news."
+        primaryLabel = "Go to registration"
+        primaryPageRef = "/registration"
+        secondaryLabel = "Contact"
+        secondaryPageRef = "/contact"
+
+      [languages.en.params.contact]
+        email = "aigen@uoh.cl"
+        phone = "+56 9 6619 1438"
+        city = "Av. Libertador Bernardo O'Higgins 611, Rancagua, O'Higgins Region"
+        organization = "AIGEN 2026"
+
+    [[languages.en.menu.main]]
+      name = "Home"
+      pageRef = "/"
+      weight = 10
+
+    [[languages.en.menu.main]]
+      name = "Program"
+      pageRef = "/program"
+      weight = 20
+
+    [[languages.en.menu.main]]
+      name = "Speakers"
+      pageRef = "/speakers"
+      weight = 30
+
+    [[languages.en.menu.main]]
+      name = "Venue"
+      pageRef = "/venue"
+      weight = 40
+
+    [[languages.en.menu.main]]
+      name = "Registration"
+      pageRef = "/registration"
+      weight = 50
+
+    [[languages.en.menu.main]]
+      name = "Organizers"
+      pageRef = "/organizers-sponsors"
+      weight = 60
+
+    [[languages.en.menu.main]]
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 70

@@ -1,0 +1,173 @@
+[skip_to_content]
+other = "Skip to main content"
+
+[home_link_aria]
+other = "Go to the AIGEN 2026 homepage"
+
+[brand_alt]
+other = "AIGEN 2026 logo"
+
+[main_navigation]
+other = "Main navigation"
+
+[language_selector]
+other = "Language selector"
+
+[language_label_es]
+other = "ES"
+
+[language_label_en]
+other = "EN"
+
+[language_name_es]
+other = "Spanish"
+
+[language_name_en]
+other = "English"
+
+[language_icon_es]
+other = "🇪🇸"
+
+[language_icon_en]
+other = "🇬🇧"
+
+[registration_eyebrow]
+other = "Registration"
+
+[event_info_aria]
+other = "Event information"
+
+[hero_visual_alt]
+other = "AIGEN 2026 visual identity"
+
+[hero_stats_aria]
+other = "Workshop highlights"
+
+[program_quick_title]
+other = "Quick overview"
+
+[program_quick_text]
+other = "Two days connecting research, implementation, and regional collaboration."
+
+[program_quick_1]
+other = "Keynotes"
+
+[program_quick_2]
+other = "Panels focused on public health"
+
+[program_quick_3]
+other = "Flash talks and posters"
+
+[program_quick_4]
+other = "Engagement, scholarships, and awards"
+
+[key_dates_title]
+other = "Key dates"
+
+[key_dates_opening_label]
+other = "Opening"
+
+[key_dates_opening_value]
+other = "April 2026"
+
+[key_dates_early_close_label]
+other = "Early deadline"
+
+[key_dates_early_close_value]
+other = "June 2026"
+
+[key_dates_confirmations_label]
+other = "Confirmations"
+
+[key_dates_confirmations_value]
+other = "July 2026"
+
+[location_title]
+other = "Location"
+
+[location_city_label]
+other = "City"
+
+[location_place_label]
+other = "Venue"
+
+[location_format_label]
+other = "Format"
+
+[location_format_value]
+other = "in person"
+
+[channels_title]
+other = "Channels"
+
+[contact_email_label]
+other = "Email"
+
+[contact_phone_label]
+other = "Phone"
+
+[contact_city_label]
+other = "City"
+
+[program_full_eyebrow]
+other = "Full program"
+
+[program_agenda_title]
+other = "Agenda by day"
+
+[speakers_eyebrow]
+other = "Guests"
+
+[speakers_title]
+other = "Speakers and profiles"
+
+[venue_map_eyebrow]
+other = "Map"
+
+[venue_map_title]
+other = "How to get to the University of O'Higgins"
+
+[venue_map_frame_title]
+other = "Map of the University of O'Higgins"
+
+[open_google_maps]
+other = "Open in Google Maps"
+
+[registration_form_eyebrow]
+other = "Form"
+
+[registration_form_title]
+other = "Complete your registration online"
+
+[registration_form_text]
+other = "You can fill out the form directly here or open it in Google Forms."
+
+[registration_form_frame_title]
+other = "AIGEN 2026 registration form"
+
+[open_google_form]
+other = "Open form in Google Forms"
+
+[organizers_eyebrow]
+other = "Team and institutions"
+
+[organizers_title]
+other = "Organizers and sponsors"
+
+[sponsors_title]
+other = "Sponsors and partners"
+
+[contact_heading]
+other = "Contact"
+
+[institutions_heading]
+other = "Institutions"
+
+[page_not_found]
+other = "Page not found"
+
+[page_not_found_summary]
+other = "The requested page does not exist or has moved."
+
+[back_home]
+other = "Back to home"

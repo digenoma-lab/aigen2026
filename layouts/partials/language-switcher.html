@@ -1,0 +1,13 @@
+{{ $translations := .AllTranslations }}
+{{ if eq (len $translations) 0 }}
+  {{ $translations = site.Home.AllTranslations }}
+{{ end }}
+{{ if gt (len $translations) 1 }}
+  <div class="language-switcher" aria-label="{{ i18n "language_selector" }}">
+    {{ range $translations }}
+      <a href="{{ .RelPermalink }}" aria-label="{{ i18n (printf "language_name_%s" .Language.Lang) }}" title="{{ i18n (printf "language_name_%s" .Language.Lang) }}" {{ if eq $.Site.Language.Lang .Language.Lang }}aria-current="true"{{ end }}>
+        <span class="language-switcher__icon" aria-hidden="true">{{ i18n (printf "language_icon_%s" .Language.Lang) }}</span>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

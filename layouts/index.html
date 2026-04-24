@@ -4,8 +4,8 @@
   <section class="section">
     <div class="container two-column two-column--intro">
       <div class="section-heading">
-        <p class="eyebrow">Sobre el workshop</p>
-        <h2>IA, genómica e innovación pública en un mismo espacio</h2>
+        <p class="eyebrow">{{ site.Params.homeIntroEyebrow }}</p>
+        <h2>{{ site.Params.homeIntroTitle }}</h2>
       </div>
       <article class="prose-card prose-card--highlight">
         {{ .Content }}
@@ -16,8 +16,8 @@
   <section class="section section--soft">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Destacados</p>
-        <h2>Una agenda pensada para colaboración real</h2>
+        <p class="eyebrow">{{ site.Params.highlightsEyebrow }}</p>
+        <h2>{{ site.Params.highlightsTitle }}</h2>
       </div>
       <div class="card-grid card-grid--three">
         {{ range site.Params.highlights }}
@@ -33,13 +33,17 @@
   <section class="section">
     <div class="container cta-banner">
       <div>
-        <p class="eyebrow">Registro</p>
+        <p class="eyebrow">{{ i18n "registration_eyebrow" }}</p>
         <h2>{{ site.Params.registration.title }}</h2>
         <p>{{ site.Params.registration.text }}</p>
       </div>
       <div class="cta-banner__actions">
-        <a class="button button--primary" href="{{ site.Params.registration.primaryUrl }}">{{ site.Params.registration.primaryLabel }}</a>
-        <a class="button button--ghost" href="{{ site.Params.registration.secondaryUrl }}">{{ site.Params.registration.secondaryLabel }}</a>
+        {{ with site.GetPage site.Params.registration.primaryPageRef }}
+          <a class="button button--primary" href="{{ .RelPermalink }}">{{ site.Params.registration.primaryLabel }}</a>
+        {{ end }}
+        {{ with site.GetPage site.Params.registration.secondaryPageRef }}
+          <a class="button button--ghost" href="{{ .RelPermalink }}">{{ site.Params.registration.secondaryLabel }}</a>
+        {{ end }}
       </div>
     </div>
   </section>

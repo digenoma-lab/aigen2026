@@ -4,36 +4,32 @@
       <p class="eyebrow">{{ site.Params.heroKicker }}</p>
       <h1>{{ site.Params.eventTitle }}</h1>
       <p class="hero__subtitle">{{ site.Params.eventSubtitle }}</p>
-      <div class="hero__meta" aria-label="Información del evento">
+      <div class="hero__meta" aria-label="{{ i18n "event_info_aria" }}">
         <span>{{ site.Params.eventDate }}</span>
         <span>{{ site.Params.eventLocation }}</span>
       </div>
-      <p class="hero__text">
-        Un workshop que reúne academia, hospitales, gobierno regional e innovación para explorar cómo la inteligencia artificial y la genómica pueden fortalecer la salud pública.
-      </p>
+      <p class="hero__text">{{ site.Params.heroText }}</p>
       <div class="hero__actions">
         {{ range site.Params.heroButtons }}
-          <a class="button {{ if eq .variant "secondary" }}button--ghost{{ else }}button--primary{{ end }}" href="{{ .url }}">{{ .label }}</a>
+          {{ $target := .url }}
+          {{ with site.GetPage .pageRef }}
+            {{ $target = .RelPermalink }}
+          {{ end }}
+          <a class="button {{ if eq .variant "secondary" }}button--ghost{{ else }}button--primary{{ end }}" href="{{ $target }}">{{ .label }}</a>
         {{ end }}
       </div>
     </div>
     <div class="hero__visual">
       <div class="hero-logo-card">
-        <img class="hero-logo-card__image" src="/images/logoAIGEN2026V5.png" alt="Identidad visual AIGEN 2026">
+        <img class="hero-logo-card__image" src="/images/logoAIGEN2026V5.png" alt="{{ i18n "hero_visual_alt" }}">
       </div>
-      <div class="hero-stats" aria-label="Aspectos destacados del workshop">
-        <article>
-          <strong>2 días</strong>
-          <span>de contenidos y colaboración</span>
-        </article>
-        <article>
-          <strong>6 formatos</strong>
-          <span>conferencias, charlas, flash talks y pósteres</span>
-        </article>
-        <article>
-          <strong>Enfoque regional</strong>
-          <span>salud pública, innovación y genómica</span>
-        </article>
+      <div class="hero-stats" aria-label="{{ i18n "hero_stats_aria" }}">
+        {{ range site.Params.heroStats }}
+          <article>
+            <strong>{{ .title }}</strong>
+            <span>{{ .text }}</span>
+          </article>
+        {{ end }}
       </div>
     </div>
   </div>
