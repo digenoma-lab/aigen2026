@@ -1,6 +1,6 @@
 ---
 title: "Organización y patrocinio"
-summary: "Equipo organizador, instituciones asociadas y patrocinadores del workshop."
+summary: "Equipo organizador, instituciones asociadas y patrocinadores de la conferencia."
 organizers:
   - name: "Alex Di Genova"
     role: "Comité científico"
@@ -19,7 +19,7 @@ organizers:
     text: "Ana María Rusque es Ingeniera Civil Industrial y Coordinadora Ejecutiva de los proyectos de Supercomputación e Innovación en Salud y CUBI en la Universidad de O’Higgins. Su trayectoria se ha centrado en la gestión administrativa, financiera y operativa de iniciativas institucionales, con foco en eficiencia, coordinación e innovación."
   - name: "Enlace territorial"
     role: "Articulación regional"
-    text: "Conecta el workshop con actores públicos, hospitales, universidades y ecosistema de innovación de la región."
+    text: "Conecta la conferencia con actores públicos, hospitales, universidades y ecosistema de innovación de la región."
 sponsors:
   - "Universidad de O'Higgins"
   - "Gobierno Regional de O'Higgins"

@@ -1,6 +1,6 @@
 # AIGEN 2026
 
-Sitio oficial del workshop **AIGEN 2026: IA y Genómica para la Salud Pública**, construido con [Hugo](https://gohugo.io/) y preparado para despliegue en Netlify.
+Sitio oficial de la conferencia **AIGEN 2026: IA y Genómica para la Salud Pública**, construido con [Hugo](https://gohugo.io/) y preparado para despliegue en Netlify.
 
 ## Requisitos
 
@@ -37,7 +37,7 @@ Los archivos compilados se publican en `public/`.
 - `data/program.yaml`: programa estructurado de los dos días.
 - `layouts/`: plantillas Hugo y partials reutilizables.
 - `static/css/site.css`: tema visual personalizado.
-- `static/images/`: logo del workshop e imágenes institucionales.
+- `static/images/`: logo de la conferencia e imágenes institucionales.
 - `netlify.toml`: configuración de build para Netlify.
 
 ## Cómo editar contenido
@@ -71,7 +71,7 @@ Edita `hugo.toml` para cambiar:
 
 ## Logos e imágenes
 
-### Logo principal del workshop
+### Logo principal de la conferencia
 
 El sitio usa:
 

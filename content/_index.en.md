@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "Official website of the AIGEN 2026 workshop: AI and Genomics for Public Health."
+description: "Official website of the AIGEN 2026 conference: AI and Genomics for Public Health."
 ---
 
 **AIGEN 2026** proposes an applied conversation around artificial intelligence, genomics, and public innovation, focused on real regional health challenges. The meeting is designed to bring together research, technology implementation, hospitals, universities, and decision-makers in a shared working environment.

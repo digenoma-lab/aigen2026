@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-summary: "Contact channels and institutional information for the workshop."
+summary: "Contact channels and institutional information for the conference."
 channels:
   - title: "General email"
     text: "Main channel for questions about registration, institutional participation, and general coordination."
@@ -8,7 +8,7 @@ channels:
       label: "Write to aigen@uoh.cl"
       url: "mailto:aigen@uoh.cl"
   - title: "Academic inquiries"
-    text: "Suggested channel for questions about speakers, posters, flash talks, and the scientific content of the workshop."
+    text: "Suggested channel for questions about speakers, posters, flash talks, and the scientific content of the conference."
   - title: "Institutional engagement"
     text: "Available for sponsorship, partnerships, and participation from public or private organizations."
 ---

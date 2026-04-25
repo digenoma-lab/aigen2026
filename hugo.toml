@@ -19,12 +19,12 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     [languages.es.params]
       description = "Sitio oficial de AIGEN 2026: IA y Genómica para la Salud Pública"
       eventTitle = "AIGEN 2026"
-      eventSubtitle = "Workshop de IA y Genómica para la Salud Pública"
+      eventSubtitle = "Conferencia de IA y Genómica para la Salud Pública"
       eventDate = "22 y 23 de julio de 2026"
       eventLocation = "Universidad de O'Higgins, Rancagua"
       heroKicker = "Encuentro académico y público-sanitario"
-      heroText = "Un workshop que reúne academia, hospitales, gobierno regional e innovación para explorar cómo la inteligencia artificial y la genómica pueden fortalecer la salud pública."
-      homeIntroEyebrow = "Sobre el workshop"
+      heroText = "Una conferencia que reúne academia, hospitales, gobierno regional e innovación para explorar cómo la inteligencia artificial y la genómica pueden fortalecer la salud pública."
+      homeIntroEyebrow = "Sobre la conferencia"
       homeIntroTitle = "IA, genómica e innovación pública en un mismo espacio"
       highlightsEyebrow = "Destacados"
       highlightsTitle = "Una agenda pensada para colaboración real"
@@ -105,7 +105,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
       [languages.es.params.registration]
         title = "Inscripciones abiertas"
-        text = "Reserva tu participación, postula a becas y mantente al día con novedades del workshop."
+        text = "Reserva tu participación, postula a becas y mantente al día con novedades de la conferencia."
         primaryLabel = "Ir a registro"
         primaryPageRef = "/registration"
         secondaryLabel = "Contacto"
@@ -161,12 +161,12 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     [languages.en.params]
       description = "Official website of AIGEN 2026: AI and Genomics for Public Health"
       eventTitle = "AIGEN 2026"
-      eventSubtitle = "Workshop on AI and Genomics for Public Health"
+      eventSubtitle = "Conference on AI and Genomics for Public Health"
       eventDate = "July 22-23, 2026"
       eventLocation = "University of O'Higgins, Rancagua"
       heroKicker = "Academic and public-health meeting"
-      heroText = "A workshop that brings together academia, hospitals, regional government, and innovation to explore how artificial intelligence and genomics can strengthen public health."
-      homeIntroEyebrow = "About the workshop"
+      heroText = "A conference that brings together academia, hospitals, regional government, and innovation to explore how artificial intelligence and genomics can strengthen public health."
+      homeIntroEyebrow = "About the conference"
       homeIntroTitle = "AI, genomics, and public innovation in one place"
       highlightsEyebrow = "Highlights"
       highlightsTitle = "An agenda designed for real collaboration"
@@ -247,7 +247,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
       [languages.en.params.registration]
         title = "Registration open"
-        text = "Reserve your participation, apply for scholarships, and stay up to date with workshop news."
+        text = "Reserve your participation, apply for scholarships, and stay up to date with conference news."
         primaryLabel = "Go to registration"
         primaryPageRef = "/registration"
         secondaryLabel = "Contact"

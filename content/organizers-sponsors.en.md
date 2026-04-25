@@ -1,6 +1,6 @@
 ---
 title: "Organizers"
-summary: "Organizing team, partner institutions, and sponsors of the workshop."
+summary: "Organizing team, partner institutions, and sponsors of the conference."
 organizers:
   - name: "Alex Di Genova"
     role: "Scientific committee"
@@ -19,7 +19,7 @@ organizers:
     text: "Ana María Rusque is an industrial civil engineer and executive coordinator of the Supercomputing and Innovation in Health and CUBI projects at the University of O’Higgins. Her career has focused on the administrative, financial, and operational management of institutional initiatives, with an emphasis on efficiency, coordination, and innovation."
   - name: "Regional liaison"
     role: "Regional engagement"
-    text: "Connects the workshop with public actors, hospitals, universities, and the regional innovation ecosystem."
+    text: "Connects the conference with public actors, hospitals, universities, and the regional innovation ecosystem."
 sponsors:
   - "University of O'Higgins"
   - "O'Higgins Regional Government"
