@@ -5,10 +5,17 @@
 <div class="logo-strip" role="list" aria-label="{{ site.Params.institutionsAriaLabel }}">
   {{ range site.Params.institutions }}
     <article class="logo-strip__item" role="listitem">
-      <a class="logo-strip__link" href="{{ .url }}" target="_blank" rel="noreferrer" aria-label="{{ .name }}">
-        <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy">
-        <p>{{ .name }}</p>
-      </a>
+      {{ if .url }}
+        <a class="logo-strip__link" href="{{ .url }}" target="_blank" rel="noreferrer" aria-label="{{ .name }}">
+          <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy">
+          <p>{{ .name }}</p>
+        </a>
+      {{ else }}
+        <div class="logo-strip__link" aria-label="{{ .name }}">
+          <img src="{{ .image }}" alt="{{ .alt }}" loading="lazy">
+          <p>{{ .name }}</p>
+        </div>
+      {{ end }}
     </article>
   {{ end }}
 </div>

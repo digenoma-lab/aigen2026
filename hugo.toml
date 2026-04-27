@@ -80,20 +80,28 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
         text = "Apoyo para participación y reconocimiento a contribuciones destacadas."
 
       [[languages.es.params.institutions]]
-        name = "Universidad de O'Higgins"
-        image = "/images/institutions/uoh.png"
-        alt = "Logo de la Universidad de O'Higgins"
-        url = "https://www.uoh.cl/"
-        width = 271
-        height = 82
-
-      [[languages.es.params.institutions]]
         name = "Gobierno Regional de O'Higgins"
         image = "/images/institutions/gore-ohiggins.png"
         alt = "Logo del Gobierno Regional de O'Higgins"
         url = "https://www.goreohiggins.cl/"
         width = 194
         height = 103
+
+      [[languages.es.params.institutions]]
+        name = "Consejo Regional de O'Higgins (CORE)"
+        image = "/images/institutions/LOGO-CORE.png"
+        alt = "Logo del Consejo Regional de O'Higgins"
+        url = "https://www.goreohiggins.cl/consejo-regional/que-es-el-consejo-regional"
+        width = 375
+        height = 134
+
+      [[languages.es.params.institutions]]
+        name = "Universidad de O'Higgins"
+        image = "/images/institutions/uoh.png"
+        alt = "Logo de la Universidad de O'Higgins"
+        url = "https://www.uoh.cl/"
+        width = 271
+        height = 82
 
       [[languages.es.params.institutions]]
         name = "Hospital Dr. Franco Ravera Zunino"
@@ -222,20 +230,28 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
         text = "Support for participation and recognition of outstanding contributions."
 
       [[languages.en.params.institutions]]
-        name = "University of O'Higgins"
-        image = "/images/institutions/uoh.png"
-        alt = "University of O'Higgins logo"
-        url = "https://www.uoh.cl/"
-        width = 271
-        height = 82
-
-      [[languages.en.params.institutions]]
         name = "O'Higgins Regional Government"
         image = "/images/institutions/gore-ohiggins.png"
         alt = "O'Higgins Regional Government logo"
         url = "https://www.goreohiggins.cl/"
         width = 194
         height = 103
+
+      [[languages.en.params.institutions]]
+        name = "Regional Council of O'Higgins (CORE)"
+        image = "/images/institutions/LOGO-CORE.png"
+        alt = "Regional Council of O'Higgins logo"
+        url = "https://www.goreohiggins.cl/consejo-regional/que-es-el-consejo-regional"
+        width = 375
+        height = 134
+
+      [[languages.en.params.institutions]]
+        name = "University of O'Higgins"
+        image = "/images/institutions/uoh.png"
+        alt = "University of O'Higgins logo"
+        url = "https://www.uoh.cl/"
+        width = 271
+        height = 82
 
       [[languages.en.params.institutions]]
         name = "Dr. Franco Ravera Zunino Hospital"

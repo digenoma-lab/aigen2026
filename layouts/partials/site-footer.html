@@ -18,7 +18,13 @@
       <h2>{{ i18n "institutions_heading" }}</h2>
       <ul class="footer-list">
         {{ range site.Params.institutions }}
-          <li><a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .name }}</a></li>
+          <li>
+            {{ if .url }}
+              <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .name }}</a>
+            {{ else }}
+              <span>{{ .name }}</span>
+            {{ end }}
+          </li>
         {{ end }}
       </ul>
     </div>

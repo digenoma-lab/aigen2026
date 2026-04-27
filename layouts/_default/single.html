@@ -249,6 +249,14 @@
             </article>
           {{ end }}
         </div>
+        {{ with .Params.funding }}
+          <div class="sponsor-block sponsor-block--funding">
+            <h3>{{ .title }}</h3>
+            {{ range .items }}
+              <p>{{ . }}</p>
+            {{ end }}
+          </div>
+        {{ end }}
         <div class="sponsor-block">
           <h3>{{ i18n "sponsors_title" }}</h3>
           <div class="tag-row">

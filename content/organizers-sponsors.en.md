@@ -1,6 +1,11 @@
 ---
 title: "Organizers"
 summary: "Organizing team, partner institutions, and sponsors of the conference."
+funding:
+  title: "Funding"
+  items:
+    - 'FIC IDI Project 40059065-0 "Supercomputing for regional health innovation: HPC-UOH and HFRZ together toward precision medicine"'
+    - "Project funded through the Regional Government Innovation Fund for Competitiveness."
 organizers:
   - name: "Alex Di Genova"
     role: "Scientific committee"
@@ -21,8 +26,9 @@ organizers:
     role: "Regional engagement"
     text: "Connects the conference with public actors, hospitals, universities, and the regional innovation ecosystem."
 sponsors:
-  - "University of O'Higgins"
   - "O'Higgins Regional Government"
+  - "Regional Council of O'Higgins (CORE)"
+  - "University of O'Higgins"
   - "Dr. Franco Ravera Zunino Hospital"
   - "Strategic partners"
 ---

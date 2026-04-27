@@ -612,7 +612,7 @@ p {
 
 .logo-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -773,6 +773,14 @@ p {
   padding: 1.6rem 0 0;
 }
 
+.sponsor-block--funding p {
+  max-width: 56rem;
+}
+
+.sponsor-block--funding p + p {
+  margin-top: 0.85rem;
+}
+
 @media (max-width: 1024px) {
   .hero__inner,
   .two-column,
@@ -789,9 +797,12 @@ p {
   }
 
   .program-preview-grid,
-  .program-grid,
-  .logo-strip {
+  .program-grid {
     grid-template-columns: 1fr;
+  }
+
+  .logo-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section-heading--split {
@@ -800,6 +811,10 @@ p {
 }
 
 @media (max-width: 720px) {
+  .logo-strip {
+    grid-template-columns: 1fr;
+  }
+
   .site-header__inner {
     align-items: start;
     flex-direction: column;
